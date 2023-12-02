@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #edede9;
+    font-family: 'Roboto', sans-serif;
+    background: url('./img/back-banner.jpg');
+}
+h1{
+    margin: 30px 0;
+    font-size: 42px;
+    color: #313131;
+    backdrop-filter: blur(2px);
+    font-weight: 900;
+    text-align: center;
+}
+h1 span{
+    font-size: 39px;
+    font-weight: 700;
+}
+
+/* ends of h1 titel */
+
+/* start the date section */
+.date-picker{
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    height: 60px;
+    background-color: transparent;
+    /* backdrop-filter: blur(4px); */
+    color: #313131;
+    margin: 30px auto;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    
+    cursor: pointer;
+    user-select: none;
+}
+.date-picker .selected-date{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 800;
+    backdrop-filter: blur(4px);
+    transition: background-color .4s ease;
+}
+.date-picker .selected-date:hover{
+    background-color: #edede9;
+}
+.date-picker .dates{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;right: 0;
+    
+}
+.date-picker .dates.active{
+    display: block;
+}
+.date-picker .dates .month{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #eee;
+    background-color: #edede9;
+}
+
+.date-picker .dates .month .arrows{
+    width: 35px;
+    height: 35px;
+    /* border-radius: 50%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #313131;
+    font-size: 20px;
+}
+.date-picker .dates .month .arrows:hover{
+    background-color: #f3f3f3;
+}
+.date-picker .dates .month .arrows:active{
+    background-color: #00ca85;
+}
+
+.date-picker .dates .days{
+    height: 200px;
+    margin-top: 2px;
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+.date-picker .dates .day{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2px;
+    transition: all .2s ease;
+}
+.date-picker .dates .day:hover{
+    background-color: #edede9;
+    border-radius: 10px;
+}
+.date-picker .dates .day.selected{
+    background-color: #00ca85;
+}
