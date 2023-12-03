@@ -94,6 +94,8 @@ h1 span{
     margin-top: 2px;
     backdrop-filter: blur(4px);
     border-radius: 10px;
+    font-weight: 700;
+    font-size: 1.2em;
 
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -111,4 +113,5 @@ h1 span{
 }
 .date-picker .dates .day.selected{
     background-color: #00ca85;
+    border-radius: 10px;
 }
